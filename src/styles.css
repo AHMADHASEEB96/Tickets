@@ -50,7 +50,7 @@ html {
 
 body {
   font-family: 'NeoSansArabic';
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
   color: var(--main-font-color);
    
    background-color: var(--body-bg);
@@ -78,8 +78,8 @@ button {
   border: none;
   
 }
-.container {
-  width: 80%;
+.my-container {
+  width: 50%;
 
   padding-left: 15px;
   padding-right: 15px;
@@ -109,3 +109,57 @@ input[type = search] {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
+
+
+
+
+/*  Media query  */
+
+@media (max-width :768px) {
+  .my-container {
+width: 95vw ;
+overflow: hidden;
+  }
+  .ticket {
+    height: 22rem;
+    margin-top: 1rem;   
+}
+.ticket-lower-halve  {
+    justify-content: center;
+    gap: 20px;
+}
+.ticket .trash-wrapper  {
+left: 0.5rem;
+top: 0.5rem;
+} 
+
+  .search-area-bar {
+    justify-content: center !important;
+    gap: 20px;
+  }
+  
+  .search-input {
+     width: 13rem;
+  }
+ 
+}
+
+@media (max-width :425px) {
+
+   .search-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .table-footer-pagination  {
+flex-direction: column;
+gap: 20px;
+  }
+}
+@media (max-width :320px) {
+
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

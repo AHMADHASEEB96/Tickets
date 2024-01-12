@@ -42,6 +42,16 @@ export class TicketComponent implements OnInit {
     // Optionally, you can provide user feedback that the text has been copied
     console.log(`Text "${textToCopy}" copied to the clipboard`);
   }
+
+  displayTooltipe(e: any) {
+    const tooltip = document.querySelector(`.trash-tooltip`);
+    tooltip?.classList.add("reveal")
+    console.log('trash clicked')
+  }
+
+  hideTooltip() {
+    document.querySelector(`.trash-tooltip`)?.classList.remove(`reveal`)
+  }
 }
 
 

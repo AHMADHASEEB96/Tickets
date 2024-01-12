@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .chart-header-title p {
@@ -34,7 +35,7 @@ margin-bottom: 0.62rem;
 .chart select {
     width: 4.21069rem;
     height: 1.89244rem;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: #FAFAFA;
     border-radius: 0.5rem;
     -webkit-border-radius: 0.5rem;

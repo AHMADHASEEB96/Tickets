@@ -6,7 +6,7 @@
                 stroke="#3D405B" stroke-opacity="0.16" stroke-width="0.824934" stroke-miterlimit="10" />
         </svg>
     </div>
-    <div class="trash-wrapper">
+    <div class="trash-wrapper" (mouseover)="displayTooltipe($event)" (mouseout)="hideTooltip()">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="vuesax/outline/trash">
                 <g id="trash">
@@ -29,6 +29,10 @@
             </g>
         </svg>
 
+        <div class="trash-tooltip  center-all">
+            <span> Delete</span>
+            <span class="trash-tooltip-triangle"></span>
+        </div>
     </div>
 
     <div class="ticket-info-wrapper w-100 h-50">

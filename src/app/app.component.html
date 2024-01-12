@@ -5,7 +5,7 @@
   </div>
 </div>
 <section class="ticket-section" [dir]="dir">
-  <div class="container h-100">
+  <div class="container">
     <div class="ticket-body">
       <!-- Header -->
       <div class="ticket-header d-flex align-items-center justify-content-between">
@@ -37,8 +37,8 @@
       </div>
       <!-- chart and ticket -->
       <div class="ticket-info row">
-        <app-chart [contentObj]="content" class="col-lg-8" [dir]="dir"></app-chart>
-        <app-ticket [contentObj]="content" class="col-lg-4" [dir]="dir"></app-ticket>
+        <app-chart [contentObj]="content" class="col-lg-8 " [dir]="dir"></app-chart>
+        <app-ticket [contentObj]="content" class="col-lg-4 " [dir]="dir"></app-ticket>
       </div>
 
       <!-- Search bar area -->

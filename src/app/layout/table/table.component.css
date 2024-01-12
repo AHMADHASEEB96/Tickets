@@ -25,6 +25,7 @@ table {
     -o-border-radius: 0.5rem;
     position: sticky;
     top: 0;
+    z-index: 1; /* Cinema cell was positioned relative to hose the absolute tooltip thats way it was showing over the cinema head on scrolling */
 }
 .table thead tr  {
     width: 78.6875rem;
@@ -87,24 +88,47 @@ font-family: 'Poppins', sans-serif;
 
    }
 
+ 
    .cinemas-tooltip {
-   position: absolute;
-   /* width: 2.53088rem; */
-   padding: 0.5rem;
-   height: 1.5rem;
-   border-radius: 0.5rem;
-   -webkit-border-radius: 0.5rem;
-   -moz-border-radius: 0.5rem;
-   -ms-border-radius: 0.5rem;
-   -o-border-radius: 0.5rem;
-   background-color: var(--main-font-color );
+    position: absolute;
+    /*width: 2.53088rem;
+    */padding: 0.5rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    background-color: var(--main-font-color );
     color: var(--table-body-bg) ;
-    top: -.6rem;
+    top: -2.5rem;
     left: 1rem;
     opacity: 0;
+    z-index: 2;
    
 }
 
+.cinemas-tooltip-ltr {
+        left: unset;
+        right: 1rem;
+      
+}
+
+
+.tooltip-triangle {
+    border-top: 1rem solid var(--main-font-color );
+    border-right: 1rem solid transparent;
+    border-left: 1rem solid transparent;
+    position: absolute;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+ 
+}
 .ticket-svg {
     width: 1.97919rem;
     height: 1.97919rem;
@@ -177,7 +201,8 @@ cursor: pointer;
        display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 1.97rem;
+    /* flex-wrap: wrap; */
+    min-height: 1.97rem;
 }
 
 
@@ -231,7 +256,15 @@ font-weight: 400;
     display: flex;
     align-items: center;
     gap: 0.75rem;
+}
+.table-pagination ul {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap ; */
+    gap: 0.75rem;
+    overflow: hidden;
     margin-bottom: 0;
+    padding-left: 0 !important;
 }
 .table-pagination li{ width: 1.6875rem; height: 1.6875rem; font-size: 0.84375rem; font-weight: 600; color: #7E8299; border-radius: 0.28rem; -webkit-border-radius: 0.28rem; -moz-border-radius: 0.28rem; -ms-border-radius: 0.28rem; -o-border-radius: 0.28rem;
 }

@@ -10,26 +10,37 @@ export class TableComponent implements OnInit {
   @Input() contentObj: any;
   @Input() dir: any;
 
-  ticketsInfo: any = [];
+  ticketsInfo: any = []; // currently to be viewed depending on the page size;
   pageSize: number = 4;
+  paginationSize: number[] = [];
   originalLength: number = 0;
   currentPage: number = 1;
   sortedBy: string = 'none';
 
   constructor(private ticketService: TicketsInfoService) { }
   ngOnInit() {
-    this.originalLength = this.ticketsInfo = this.ticketService.getTicketsInfo().length
+    this.originalLength = this.ticketService.getTicketsInfo().length
     this.ticketsInfo = this.ticketService.getTicketsInfo().splice(0, this.pageSize)
-    console.log(this.ticketsInfo)
+    this.resizeThePagination();
+  }
+  // Create an Array with the size number of the pages in the table;
+  resizeThePagination(): void {
+    let pagesNo = (this.originalLength % this.pageSize) == 0 ? (this.originalLength / this.pageSize) : (this.originalLength / this.pageSize) + 1;
+    this.paginationSize = Array.from({ length: pagesNo }, (_, index) => index + 1) // should return a number to assign it ti number[]
+    // Do not use {} so that the arrow function will return by default otherwise you will need to use the keyword return 
+
   }
 
   getPageSize(e: any) {
     this.pageSize = e.target.value;
+    // Construct the array of objects to be viewed;
     this.ticketsInfo = this.ticketService.getTicketsInfo().splice(0, this.pageSize)
+    // then resize the array of number of pages
+    this.resizeThePagination();
   }
 
   displayTooltipe(e: any, isMoreThanThree: boolean) {
-    const tooltip = e.target.querySelector(`.cinemas-tooltip`);
+    const tooltip = e.target.querySelector(`.custom-tooltip`);
     isMoreThanThree ? tooltip?.classList.add("reveal") : tooltip?.classList.remove("reveal")
   }
 

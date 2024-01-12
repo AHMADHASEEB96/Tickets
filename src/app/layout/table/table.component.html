@@ -40,8 +40,10 @@
             <td class="cinemas-cell" (mouseover)="displayTooltipe($event, ticket.cinemas.length > 4 )"
                 (mouseout)="hideTooltip()">
                 {{ticket.cinemas.slice(0,4)}} <span *ngIf="ticket.cinemas.length > 4">...</span>
-                <div class="cinemas-tooltip center-all" #atooltipe>
+                <div class="cinemas-tooltip custom-tooltip center-all" #atooltipe
+                    [class.cinemas-tooltip-ltr]="dir == 'ltr'">
                     <span>{{ticket.cinemas.slice(4)}}</span>
+                    <span class="tooltip-triangle"></span>
                 </div>
             </td>
             <td>{{ticket.personsCount}}</td>
@@ -79,17 +81,18 @@
             </div>
             <span>{{contentObj.table.outOf}} {{originalLength}}</span>
         </div>
-        <ul class="table-pagination">
+
+        <div class="table-pagination">
             <button class="page-minus pagination-button" [disabled]="currentPage == 1"><i
-                    class="fa-solid fa-angle-right"></i></button>
-            <li class="center-all active-page"> 1 </li>
-            <li class="center-all"> 1 </li>
-            <li class="center-all"> 1 </li>
-            <li class="center-all"> 1 </li>
-            <li class="center-all"> 1 </li>
-            <li class="center-all"> 1 </li>
-            <button class="page-plus pagination-button"> <i class="fa-solid fa-angle-left"></i> </button>
-        </ul>
+                    class="fa-solid fa-angle-right" [class.fa-angle-left]="dir == 'ltr'"></i></button>
+
+            <ul>
+                <li class="center-all" *ngFor="let page of paginationSize"> {{page}} </li>
+            </ul>
+            <button class="page-plus pagination-button"> <i class="fa-solid " [class.fa-angle-right]="dir == 'ltr'"
+                    [class.fa-angle-left]="dir == 'rtl'"></i> </button>
+        </div>
+
     </div>
 
 </div>

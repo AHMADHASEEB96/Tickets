@@ -351,6 +351,24 @@ export class TicketsInfoService {
           fileSize: 9,
         }
       },
+      {
+        userInfo: {
+          name: "محمد الغريب",
+          phoneNumber: "0123456789",
+          image: ''
+        },
+        phoneNumber: "0123456789",
+        ticketNumber: "C-101",
+        ticketValue: 54,
+        cinemas: ["سينما مصر", " مول العرب", " سرايا القبة"],
+        personsCount: 70,
+        purchasesCount: 5,
+        ticketFile: {
+          fileName: "تذكرة رقم 45.pdf",
+          fileType: "pdf",
+          fileSize: 9,
+        }
+      },
     ]
   }
 }
