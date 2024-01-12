@@ -1,0 +1,95 @@
+<table class="table text-center">
+    <thead>
+        <tr>
+
+            <th>#</th>
+            <th>{{contentObj.table.tableUser}}</th>
+            <th> {{contentObj.table.ticketNumber}}</th>
+            <th class="ticket-value-header" (click)="sortTable()"> {{contentObj.table.ticketValue}}
+                <img class="order-indicator" src="assets/svg/arrow-3.svg" alt="sort arrow" *ngIf="sortedBy == 'none'">
+                <i class="fa-solid fa-arrow-down-short-wide order-indicator" *ngIf="sortedBy == 'as'"></i>
+                <i class="fa-solid fa-arrow-down-wide-short order-indicator" *ngIf="sortedBy == 'des'"></i>
+            </th>
+            <th> {{contentObj.table.cinemas}}</th>
+            <th> {{contentObj.table.personsCount}}</th>
+            <th> {{contentObj.table.purchasesCount}} </th>
+            <th> {{contentObj.table.ticketFile}}</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ticket of ticketsInfo; let i = index">
+            <td>{{i + 1}}</td>
+            <td class="user-info-cell">
+                <div class="profile-photo-wrapper" *ngIf="ticket.userInfo.image !=  '' "
+                    [ngStyle]="{'background-color' : ticket.userInfo.image !=  '' ? 'unset': 'auto'}">
+                    <img [src]="ticket.userInfo.image" alt="profile Image" class="user-avatar img img-fluid">
+                </div>
+                <div class="profile-photo-wrapper" *ngIf="ticket.userInfo.image ==  '' ">
+                    {{ticket.userInfo.name.split(" ")[0][0]}}
+                    {{ticket.userInfo.name.split(" ")[1][0]}}
+                </div>
+                <div class="user-info">
+                    <p>{{ticket.userInfo.name}} </p>
+                    <p>{{ticket.userInfo.phoneNumber}} </p>
+                </div>
+            </td>
+            <td>{{ticket.ticketNumber}}</td>
+            <td> ${{ticket.ticketValue}}</td>
+
+            <td class="cinemas-cell" (mouseover)="displayTooltipe($event, ticket.cinemas.length > 4 )"
+                (mouseout)="hideTooltip()">
+                {{ticket.cinemas.slice(0,4)}} <span *ngIf="ticket.cinemas.length > 4">...</span>
+                <div class="cinemas-tooltip center-all" #atooltipe>
+                    <span>{{ticket.cinemas.slice(4)}}</span>
+                </div>
+            </td>
+            <td>{{ticket.personsCount}}</td>
+            <td>{{ticket.purchasesCount == 1 ? contentObj.table.once : ticket.purchasesCount}}</td>
+
+            <td class="file-cell">
+                <div class="ticket-svg" [class.ticket-svg-ltr]="dir == 'ltr'"><img src="assets/svg/ticket.svg"
+                        alt="ticket"></div>
+                <div>
+                    <div class="file-name">{{contentObj.table.aTicketNumber}}</div>
+                    <div class="file-size-type"><span class="file-type">{{ticket.ticketFile.fileType |
+                            uppercase}}</span>.<span class="file-size">{{ticket.ticketFile.fileSize}}mb</span>
+                    </div>
+                </div>
+                <div class="file-svg" [class.file-svg-ltr]="dir == 'ltr'"><img src="assets/svg/download.svg"
+                        alt="download file"></div>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<div class="table-footer">
+    <div class="table-footer-pagination">
+        <div class="table-content-size">
+            <span class="display">{{contentObj.table.show}}</span>
+            <div class="select-wrapper">
+                <img src="assets/svg/Chevron-Down.svg" alt="Chevron-Down" class="chevron-Down">
+                <select class="" name="" id="" (change)="getPageSize($event)">
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                    <option value="16">16</option>
+                    <option value="30">30</option>
+
+                </select>
+            </div>
+            <span>{{contentObj.table.outOf}} {{originalLength}}</span>
+        </div>
+        <ul class="table-pagination">
+            <button class="page-minus pagination-button" [disabled]="currentPage == 1"><i
+                    class="fa-solid fa-angle-right"></i></button>
+            <li class="center-all active-page"> 1 </li>
+            <li class="center-all"> 1 </li>
+            <li class="center-all"> 1 </li>
+            <li class="center-all"> 1 </li>
+            <li class="center-all"> 1 </li>
+            <li class="center-all"> 1 </li>
+            <button class="page-plus pagination-button"> <i class="fa-solid fa-angle-left"></i> </button>
+        </ul>
+    </div>
+
+</div>

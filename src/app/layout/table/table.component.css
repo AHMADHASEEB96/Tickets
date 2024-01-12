@@ -1,0 +1,257 @@
+table {
+    margin-top: 1rem;
+    background-color: var(--secondary-font);
+    border-radius: 0.5rem 0.5rem 0 0;
+    -webkit-border-radius: 0.5rem 0.5rem 0 0;
+    -moz-border-radius: 0.5rem 0.5rem 0 0;
+    -ms-border-radius: 0.5rem 0.5rem 0 0;
+    -o-border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: 400;
+    margin-bottom: 0;
+    /*table-layout: fixed;
+    */overflow: auto;
+}
+.table th,
+.table td {
+    vertical-align: middle;
+}
+.table thead {
+    background-color:var(--table-header-bg);
+    border: 0.3rem solid var(--secondary-font);
+     border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+.table thead tr  {
+    width: 78.6875rem;
+    height: 2.5625rem;
+    opacity: 0.25;
+    border-radius: 0.5rem;
+    color: var(--table-header-color);
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.ticket-value-header {
+    cursor: pointer;
+}
+
+
+tbody,
+.table-footer {
+    background-color: var(--table-body-bg);
+}
+
+.user-info-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.47rem;
+}
+
+ .profile-photo-wrapper  {
+    width: 1.86731rem;
+    height: 1.86731rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+   background-color: #038CB7;
+   display: grid;
+   place-content: center;
+   color: var(--secondary-font);
+}
+
+
+  .user-info p {
+    margin-bottom: 0;
+ }
+   .user-info p:first-child {
+    font-size: 0.72619rem;
+   }
+   .user-info p:nth-child(2) {
+font-size: 0.62244rem;
+color: var(--phone-color);
+font-family: 'Poppins', sans-serif;
+   }
+
+   .cinemas-cell {
+    position: relative;
+
+   }
+
+   .cinemas-tooltip {
+   position: absolute;
+   /* width: 2.53088rem; */
+   padding: 0.5rem;
+   height: 1.5rem;
+   border-radius: 0.5rem;
+   -webkit-border-radius: 0.5rem;
+   -moz-border-radius: 0.5rem;
+   -ms-border-radius: 0.5rem;
+   -o-border-radius: 0.5rem;
+   background-color: var(--main-font-color );
+    color: var(--table-body-bg) ;
+    top: -.6rem;
+    left: 1rem;
+    opacity: 0;
+   
+}
+
+.ticket-svg {
+    width: 1.97919rem;
+    height: 1.97919rem;
+    padding: 0.70094rem;
+    display: grid;
+    place-content: center;
+    border-radius: 0.49481rem;
+    background-color: rgba(138, 116, 249, 0.10);
+    -webkit-border-radius: 0.49481rem;
+    -moz-border-radius: 0.49481rem;
+    -ms-border-radius: 0.49481rem;
+    -o-border-radius: 0.49481rem;
+    margin-left:0.52rem ;
+    cursor: pointer;
+    
+}
+.ticket-svg-ltr {
+    margin-left:unset ;
+    margin-right:0.52rem ;
+
+}
+
+
+.file-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.file-name {
+    font-size: 0.72919rem;
+}
+.file-type,
+.file-size {
+    font-size: 0.625rem;
+}
+
+.file-size-type {
+display: flex;
+align-items: center;
+gap: 0.29rem;
+color: black;
+opacity: 0.4;
+font-family:  sans-serif;
+}
+
+
+
+.file-svg {
+margin-right: 1.4rem;
+cursor: pointer;
+}
+.file-svg-ltr {
+    margin-right: unset;
+    margin-left: 1.4rem;
+}
+
+/* table footer */
+.table-footer {
+    padding: 0.69rem 0.81rem;
+    margin-bottom: 50px;
+    border-radius: 0 0 0.5rem 0.5rem;
+    -webkit-border-radius: 0 0 0.5rem 0.5rem;
+    -moz-border-radius: 0 0 0.5rem 0.5rem;
+    -ms-border-radius: 0 0 0.5rem 0.5rem;
+    -o-border-radius: 0 0 0.5rem 0.5rem;
+}
+.table-footer-pagination  {
+       display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.97rem;
+}
+
+
+.table-content-size {
+    color: var(--second-hand-color);
+    display: flex;
+    align-items: center;
+    gap: 0.47rem;
+}
+.select-wrapper {
+    position: relative;
+
+}
+.table-content-size  select {
+    width: 3.28rem;
+    height: 1.97rem;
+    padding: 0.375rem 0.70313rem;
+    background-color: none;
+    outline: none;
+    border: 1px solid #DDDDDD;
+    -webkit-appearance:none;
+    border-radius: 0.38rem;
+    -webkit-border-radius: 0.38rem;
+    -moz-border-radius: 0.38rem;
+    -ms-border-radius: 0.38rem;
+    -o-border-radius: 0.38rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.chevron-Down {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%) ;
+    -webkit-transform: translateY(-50%) ;
+    -moz-transform: translateY(-50%) ;
+    -ms-transform: translateY(-50%) ;
+    -o-transform: translateY(-50%) ;
+    margin-left: 10px;
+}
+option {
+   
+}
+.display {
+font-size: 0.65625rem;
+font-weight: 400;
+}
+.table-pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0;
+}
+.table-pagination li{ width: 1.6875rem; height: 1.6875rem; font-size: 0.84375rem; font-weight: 600; color: #7E8299; border-radius: 0.28rem; -webkit-border-radius: 0.28rem; -moz-border-radius: 0.28rem; -ms-border-radius: 0.28rem; -o-border-radius: 0.28rem;
+}
+.table-pagination li:hover {
+    background-color: var( --card-bg);
+    color: var(--table-body-bg) !important;
+    cursor: pointer;
+}
+.table-pagination  .pagination-button {
+  font-size: 0.8rem;
+  background-color: unset;
+  width: 1.6875rem; height: 1.6875rem;
+}
+
+.active-page {
+    background-color: var( --card-bg);
+    color: var(--table-body-bg) !important;
+}
+
+.order-indicator {
+    color: black ;
+    opacity: 1;
+}

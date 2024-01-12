@@ -1,0 +1,26 @@
+<div class="chart">
+
+    <div class="chart-header">
+        <div class="chart-header-title">
+            <p> {{contentObj.chart.headerTitle}} </p>
+            <div class="chart-header-dates">
+                <span> {{contentObj.chart.headerDateFrom}}</span> -
+                <span> {{contentObj.chart.headerDateTo}}</span>
+                <img src="assets/svg/Chevron-Down.svg" alt="Chevron-Down" style="color: #99A1B7;">
+            </div>
+        </div>
+        <select name="" id="">
+            <option value="">{{contentObj.chart.periodOption}}</option>
+        </select>
+    </div>
+
+    <div class="chart-wrapper">
+        <apx-chart class="apx-chart" [series]="series" [chart]="chart" [title]="title" [labels]="chartLabels"
+            [fill]="fill" [dataLabels]="dataLabels"></apx-chart>
+    </div>
+
+</div>
+
+<!-- the width and height 100% in the chart configuration are 100% from the apex-chart element so it self needs to take a width and height so that 
+the chart itself takes this W and H,
+ also the apex-chart element needs to by displayed block cause I think be default it is inline -->

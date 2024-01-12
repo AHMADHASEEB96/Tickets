@@ -1,0 +1,48 @@
+.chart {
+     height: 100%;
+     background-color: var(  --table-body-bg);
+     padding: 1.4rem 1.4rem 0 1.4rem;
+     border-radius: 0.5rem;
+     -webkit-border-radius: 0.5rem;
+     -moz-border-radius: 0.5rem;
+     -ms-border-radius: 0.5rem;
+     -o-border-radius: 0.5rem;
+     display: grid;
+
+}
+.apx-chart {
+    display: block;
+    height: 100%;
+}
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chart-header-title p {
+margin-bottom: 0;
+font-size: 0.875rem;
+font-weight: bold;
+margin-bottom: 0.62rem;
+}
+.chart-header-dates {
+    color: var( --phone-color);
+}
+
+.chart select {
+    width: 4.21069rem;
+    height: 1.89244rem;
+    border: none;
+    background-color: #FAFAFA;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}

@@ -1,0 +1,96 @@
+<div class="ticket">
+    <div class="curve-wrapper" *ngFor="let curve of curvesCount ; let index = index" [style.top.rem]="(index - 2)* 3">
+        <svg width="408" height="138" viewBox="0 0 408 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="ticket-curve"
+                d="M422.233 136.921C388.459 126.182 385.234 140.418 351.43 129.669C317.656 118.93 320.88 104.695 287.076 93.9462C253.302 83.2072 250.077 97.4427 216.273 86.6941C182.498 75.9551 185.723 61.7196 151.918 50.971C118.114 40.2224 114.889 54.458 81.1151 43.719C47.3107 32.9704 50.5353 18.7348 16.761 7.99581C-17.0133 -2.7432 -20.268 11.4828 -54.0423 0.743783"
+                stroke="#3D405B" stroke-opacity="0.16" stroke-width="0.824934" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <div class="trash-wrapper">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="vuesax/outline/trash">
+                <g id="trash">
+                    <path id="Vector"
+                        d="M19.25 6.16926C19.2317 6.16926 19.2042 6.16926 19.1767 6.16926C14.3275 5.68342 9.48751 5.50009 4.69335 5.98592L2.82335 6.16926C2.43835 6.20592 2.09918 5.93092 2.06251 5.54592C2.02585 5.16092 2.30085 4.83092 2.67668 4.79426L4.54668 4.61092C9.42335 4.11592 14.3642 4.30842 19.3142 4.79426C19.69 4.83092 19.965 5.17009 19.9283 5.54592C19.9008 5.90342 19.5983 6.16926 19.25 6.16926Z"
+                        fill="white" />
+                    <path id="Vector_2"
+                        d="M7.79167 5.24343C7.755 5.24343 7.71833 5.24343 7.6725 5.23426C7.30583 5.17009 7.04917 4.81259 7.11333 4.44593L7.315 3.24509C7.46167 2.36509 7.66333 1.14593 9.79916 1.14593H12.2008C14.3458 1.14593 14.5475 2.41093 14.685 3.25426L14.8867 4.44593C14.9508 4.82176 14.6942 5.17926 14.3275 5.23426C13.9517 5.29843 13.5942 5.04176 13.5392 4.67509L13.3375 3.48343C13.2092 2.68593 13.1817 2.53009 12.21 2.53009H9.80833C8.83667 2.53009 8.81833 2.65843 8.68083 3.47426L8.47 4.66593C8.415 5.00509 8.12167 5.24343 7.79167 5.24343Z"
+                        fill="white" />
+                    <path id="Vector_3"
+                        d="M13.9425 20.8543H8.05751C4.85834 20.8543 4.73001 19.0851 4.62918 17.6551L4.03334 8.42426C4.00584 8.04842 4.29918 7.71843 4.67501 7.69093C5.06001 7.67259 5.38084 7.95676 5.40834 8.33259L6.00418 17.5634C6.10501 18.9568 6.14168 19.4793 8.05751 19.4793H13.9425C15.8675 19.4793 15.9042 18.9568 15.9958 17.5634L16.5917 8.33259C16.6192 7.95676 16.9492 7.67259 17.325 7.69093C17.7008 7.71843 17.9942 8.03926 17.9667 8.42426L17.3708 17.6551C17.27 19.0851 17.1417 20.8543 13.9425 20.8543Z"
+                        fill="white" />
+                    <path id="Vector_4"
+                        d="M12.5217 15.8126H9.46918C9.09334 15.8126 8.78168 15.5009 8.78168 15.1251C8.78168 14.7493 9.09334 14.4376 9.46918 14.4376H12.5217C12.8975 14.4376 13.2092 14.7493 13.2092 15.1251C13.2092 15.5009 12.8975 15.8126 12.5217 15.8126Z"
+                        fill="white" />
+                    <path id="Vector_5"
+                        d="M13.2917 12.1459H8.70834C8.33251 12.1459 8.02084 11.8343 8.02084 11.4584C8.02084 11.0826 8.33251 10.7709 8.70834 10.7709H13.2917C13.6675 10.7709 13.9792 11.0826 13.9792 11.4584C13.9792 11.8343 13.6675 12.1459 13.2917 12.1459Z"
+                        fill="white" />
+                </g>
+            </g>
+        </svg>
+
+    </div>
+
+    <div class="ticket-info-wrapper w-100 h-50">
+        <p class="ticket-title"> {{contentObj.ticketBody.ticketTitle}} </p>
+        <div class="ticket-link-wrapper">
+            <p class="ticket-link" #ticketLink> www.tazkty.com/473847 </p>
+            <img src="assets/svg/copy.svg" alt="copy" (click)="copyText(ticketLink)" class="copy-link"
+                title="copy link">
+        </div>
+        <p class="ticket-note"> {{contentObj.ticketBody.ticketNote}} </p>
+    </div>
+
+    <div class="divider-dashed-line">
+        <svg xmlns="http://www.w3.org/2000/svg" width="382" height="4" viewBox="0 0 382 4" fill="none">
+            <path d="M2 2.00009L380.378 2.00009" stroke="white" stroke-opacity="0.4" stroke-width="2.4948"
+                stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5.82 5.82" />
+        </svg>
+    </div>
+
+    <div class="ticket-lower-halve">
+        <div class="ticket-bonus-wrapper">
+            <div class="bonus">
+                {{contentObj.ticketBody.ticketOffer}}<br> 25%
+            </div>
+            <div class="send">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="vuesax/outline/send-2">
+                        <g id="send-2">
+                            <path id="Vector"
+                                d="M6.52 14.4201C7.30666 14.4201 8.42 13.8668 9.3 11.2201L9.78 9.78009L11.22 9.30009C13.86 8.42009 14.4133 7.30676 14.4133 6.52009C14.4133 5.74009 13.86 4.62009 11.22 3.73343L5.56 1.84676C4.14667 1.37343 2.96667 1.51343 2.24 2.23343C1.51333 2.95343 1.37333 4.14009 1.84667 5.55343L3.73333 11.2134C4.62 13.8668 5.73333 14.4201 6.52 14.4201ZM10.9067 4.68676C12.76 5.30676 13.42 6.04009 13.42 6.52009C13.42 7.00009 12.76 7.73343 10.9067 8.34676L9.22667 8.90676C9.08 8.95343 8.96 9.07343 8.91333 9.22009L8.35333 10.9001C7.74 12.7534 7 13.4134 6.52 13.4134C6.04 13.4134 5.30667 12.7534 4.68667 10.9001L2.8 5.24009C2.46 4.21343 2.52 3.37343 2.95333 2.94009C3.38667 2.50676 4.22667 2.45343 5.24667 2.79343L10.9067 4.68676Z"
+                                fill="white" />
+                            <path id="Vector_2"
+                                d="M9.26 9.60009C9.38667 9.60009 9.51333 9.55342 9.61333 9.45342C9.80667 9.26009 9.80667 8.94009 9.61333 8.74675L7.22667 6.35342C7.03333 6.16009 6.71333 6.16009 6.52 6.35342C6.32667 6.54675 6.32667 6.86675 6.52 7.06009L8.90667 9.45342C9 9.55342 9.13333 9.60009 9.26 9.60009Z"
+                                fill="white" />
+                        </g>
+                    </g>
+                </svg>
+                <span>{{contentObj.ticketBody.ticketSharing}}</span>
+            </div>
+
+        </div>
+        <div class="ticket-qr-wrapper">
+            <!-- <img src="assets/images/qr_img 1.png" alt="qr"> -->
+            <qrcode class="qr-code" [qrdata]="ticketName" [width]="70" [allowEmptyString]="false" [margin]="1">
+            </qrcode>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- For some reason the curves where starting from a big distance from the top of the ticket card so I had to reduce the top value 2 times , the first curve will be 
+top : -6 rem; and so on     
+-->
+
+<!-- 
+    Calling some method that changes things in one component doesn't affect other component but reloading the page does,
+     for example if the buttons to change the lang are withing the app component then the method that responds to the button click is in the app component
+      and then the implementation of this method  and the call is withing it, when the button is clicked this method is called and makes some changes 
+      inside the app component like go and get the lang saved in the local storage then depending on it go and get the content from the content service and then
+       the content will change it’s language in the app component only but not others because this method doesn’t commit same changes there. so you need to repeat 
+       the same for all components or pass the content from the app component html to the children ,
+        for that we can pass this information from the app component to the children using the @input() decorator
+ -->
