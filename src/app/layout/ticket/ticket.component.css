@@ -1,5 +1,4 @@
 .ticket {
-    /* width: 25.5rem; */
     min-height: 16.5rem;
     position: relative;
     background-color: var(--card-bg);
@@ -163,7 +162,6 @@ color: var( --main-font-color );
     bottom: 1.12rem;
     padding-inline: 2rem;
     width: 100%;
-    /* background-color: red; */
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -188,6 +186,10 @@ color: var( --main-font-color );
     gap: 0.1rem;
     cursor: pointer;
     
+}
+
+.send:hover {
+   border: 1px solid var(--card-bg);
 }
 
 .send span {

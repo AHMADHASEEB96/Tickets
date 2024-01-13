@@ -9,7 +9,7 @@
     font-style: normal;
 }
 
-
+/* **** General Styling **** */
 
 :root {
   --body-bg :#F3F5F7; /* body bg */
@@ -50,21 +50,13 @@ html {
 
 body {
   font-family: 'NeoSansArabic';
-  /* font-size: 0.75rem; */
   color: var(--main-font-color);
-   
    background-color: var(--body-bg);
-   /* position: relative; */
-
-
-
- 
 }
 a {
   text-decoration: none;
   color: inherit;
 }
-
 
 ul:not(#regrets-ul) {
   list-style: none;
@@ -113,7 +105,8 @@ input[type = search] {
 
 
 
-/*  Media query  */
+/* **** Media Query **** */
+
 
 @media (max-width :768px) {
   .my-container {

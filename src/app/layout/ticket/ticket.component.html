@@ -39,8 +39,9 @@
         <p class="ticket-title"> {{contentObj.ticketBody.ticketTitle}} </p>
         <div class="ticket-link-wrapper">
             <p class="ticket-link" #ticketLink> www.tazkty.com/473847 </p>
-            <img src="assets/svg/copy.svg" alt="copy" (click)="copyText(ticketLink)" class="copy-link"
+            <img src="assets/svg/copy.svg" alt="copy" (click)="copyText($event, ticketLink, copied)" class="copy-link"
                 title="copy link">
+            <i class="fa-solid fa-circle-check hidden" #copied style="color: black;"></i>
         </div>
         <p class="ticket-note"> {{contentObj.ticketBody.ticketNote}} </p>
     </div>
@@ -75,7 +76,6 @@
 
         </div>
         <div class="ticket-qr-wrapper">
-            <!-- <img src="assets/images/qr_img 1.png" alt="qr"> -->
             <qrcode class="qr-code" [qrdata]="ticketName" [width]="70" [allowEmptyString]="false" [margin]="1">
             </qrcode>
 
@@ -83,18 +83,3 @@
     </div>
 
 </div>
-
-
-<!-- For some reason the curves where starting from a big distance from the top of the ticket card so I had to reduce the top value 2 times , the first curve will be 
-top : -6 rem; and so on     
--->
-
-<!-- 
-    Calling some method that changes things in one component doesn't affect other component but reloading the page does,
-     for example if the buttons to change the lang are withing the app component then the method that responds to the button click is in the app component
-      and then the implementation of this method  and the call is withing it, when the button is clicked this method is called and makes some changes 
-      inside the app component like go and get the lang saved in the local storage then depending on it go and get the content from the content service and then
-       the content will change it’s language in the app component only but not others because this method doesn’t commit same changes there. so you need to repeat 
-       the same for all components or pass the content from the app component html to the children ,
-        for that we can pass this information from the app component to the children using the @input() decorator
- -->

@@ -57,3 +57,8 @@ input[type = search]::placeholder {
     -o-border-radius: 0.47rem;
     background-color: var(--secondary-font);
 }
+
+.search-options-button:hover{
+    border: 1px solid var(--card-bg);
+  
+}

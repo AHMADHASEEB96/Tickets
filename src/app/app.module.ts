@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LangComponent } from './common/lang/lang.component';
 import { ChartComponent } from './layout/chart/chart.component';
 import { TicketComponent } from './layout/ticket/ticket.component';
 import { SearchComponent } from './layout/search/search.component';
@@ -15,7 +14,6 @@ import { QRCodeModule } from 'angularx-qrcode';
 @NgModule({
   declarations: [
     AppComponent,
-    LangComponent,
     ChartComponent,
     TicketComponent,
     SearchComponent,

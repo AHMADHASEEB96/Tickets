@@ -16,11 +16,7 @@
 
     <div class="chart-wrapper">
         <apx-chart class="apx-chart" [series]="series" [chart]="chart" [title]="title" [labels]="chartLabels"
-            [fill]="fill" [dataLabels]="dataLabels"></apx-chart>
+            [fill]="fill" [dataLabels]="dataLabels" [yaxis]="yaxis" [xaxis]="xaxis" [grid]="grid"></apx-chart>
     </div>
 
 </div>
-
-<!-- the width and height 100% in the chart configuration are 100% from the apex-chart element so it self needs to take a width and height so that 
-the chart itself takes this W and H,
- also the apex-chart element needs to by displayed block cause I think be default it is inline -->

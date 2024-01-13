@@ -21,6 +21,10 @@
     place-items: center;
     border: none;
 }
+
+.header-arrow:hover {
+   outline: 1px solid var(--card-bg);
+}
 .ticket-header {
   height: 2.125rem;
 }
@@ -58,6 +62,9 @@ gap: 0.5rem;
 font-size: 0.875rem;
 font-weight: 400;
 }
+.header-edit:hover {
+   border: 1px solid var(--card-bg);
+}
 
 .ticket-info {
     min-height: 16.5rem;
@@ -84,9 +91,7 @@ font-weight: 400;
 .search-bar-title {
   font-weight: bold;
 }
-.search-bar-options {
-justify-self: flex-end;
-}
+
 
 .search-bar-options {
     display: flex;
@@ -159,7 +164,17 @@ justify-self: flex-end;
     height: fit-content;
 }
 
+.book-new:hover {
+ background-color: var(--secondary-font);
+ color: var(--card-bg);
+}
 .book-new-ltr {
     margin-right: unset;
     margin-left: 1.25rem;
+}
+
+.app-table {
+        max-width: 100%;
+    display: block;
+    overflow: auto;
 }

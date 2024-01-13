@@ -10,6 +10,7 @@ table {
     margin-bottom: 0;
     /*table-layout: fixed;
     */overflow: auto;
+    white-space:nowrap;
 }
 .table th,
 .table td {
@@ -25,7 +26,7 @@ table {
     -o-border-radius: 0.5rem;
     position: sticky;
     top: 0;
-    z-index: 1; /* Cinema cell was positioned relative to hose the absolute tooltip thats way it was showing over the cinema head on scrolling */
+    z-index: 1; 
 }
 .table thead tr  {
     width: 78.6875rem;
@@ -91,8 +92,7 @@ font-family: 'Poppins', sans-serif;
  
    .cinemas-tooltip {
     position: absolute;
-    /*width: 2.53088rem;
-    */padding: 0.5rem;
+    padding: 0.5rem;
     height: 3rem;
     border-radius: 0.5rem;
     -webkit-border-radius: 0.5rem;
@@ -266,7 +266,18 @@ font-weight: 400;
     margin-bottom: 0;
     padding-left: 0 !important;
 }
-.table-pagination li{ width: 1.6875rem; height: 1.6875rem; font-size: 0.84375rem; font-weight: 600; color: #7E8299; border-radius: 0.28rem; -webkit-border-radius: 0.28rem; -moz-border-radius: 0.28rem; -ms-border-radius: 0.28rem; -o-border-radius: 0.28rem;
+.table-pagination li
+{
+      width: 1.6875rem;
+      height: 1.6875rem;
+      font-size: 0.84375rem;
+      font-weight: 600;
+      color: #7E8299;
+      border-radius: 0.28rem;
+      -webkit-border-radius: 0.28rem;
+      -moz-border-radius: 0.28rem;
+      -ms-border-radius: 0.28rem;
+      -o-border-radius: 0.28rem;
 }
 .table-pagination li:hover {
     background-color: var( --card-bg);

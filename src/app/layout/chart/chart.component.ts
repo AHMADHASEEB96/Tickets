@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ApexAxisChartSeries, ApexChart, ApexOptions } from 'ng-apexcharts';  // Import ApexOptions
+import { ApexAxisChartSeries, ApexChart, ApexOptions } from 'ng-apexcharts';
 import { ApexTitleSubtitle } from 'ng-apexcharts';
 
 @Component({
@@ -9,11 +9,14 @@ import { ApexTitleSubtitle } from 'ng-apexcharts';
 })
 export class ChartComponent {
   series: ApexAxisChartSeries;
-  chart: ApexChart;  // Use ApexOptions instead of ApexChart
+  chart: ApexChart;
   title: ApexTitleSubtitle;
   chartLabels: any;
   fill: any;
+  yaxis: any;
   dataLabels: any;
+  xaxis: any;
+  grid: any;
   @Input() contentObj: any;
   @Input() dir: any;
 
@@ -35,10 +38,10 @@ export class ChartComponent {
 
       }
     this.series = [{
-      name: 'any',
-      data: [10, 3, 3.7, 8.2, 10, 7, 12, 6, 3, 8, 11, 5],
-      color: '#8A74F9', // Set line color
-      // type: 'line',
+      name: 'Value',
+      data: [10, 3, 3.7, 8.2, 10, 7, 12, 6, 3, 8, 11, 5].reverse(),
+      color: '#8A74F9',
+
     }]
     this.chart = {
       type: 'area',
@@ -50,6 +53,24 @@ export class ChartComponent {
       fontFamily: 'NeoSansArabic, sans-serif',
 
     };
-    this.chartLabels = ['يناير', 'فبراير', 'مارس', 'إبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر']
+    this.chartLabels = ['يناير', 'فبراير', 'مارس', 'إبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'].reverse(),
+      this.yaxis = {
+        show: false
+      },
+      this.xaxis = {
+
+        labels: {
+          style: {
+            colors: ['#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5', '#9291A5',], // Change the color to red
+            fontSize: '12px',
+            fontWeight: 500,
+            fontFamily: 'NeoSansArabic, sans-serif'
+          }
+        }
+      }
+    this.grid = {
+      borderColor: `#E5E5EF`,
+
+    }
   }
 }
